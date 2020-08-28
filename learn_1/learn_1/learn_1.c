@@ -1,12 +1,12 @@
 
-//#define  _CRT_SECURE_NO_WARNINGS
-//#include <stdio.h>
-//#include <stdlib.h>
-//#include <math.h>
-//#include <time.h>
+#define  _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
 //
-////int Binarysearch(int arr[], int size, int tofind) {  //自定义函数
-////	int left = 0;
+//int Binarysearch(int arr[], int size, int tofind) {  //自定义函数
+//	int left = 0;
 //	int right = size - 1;  
 //	int count = 0;
 //	while (left <= right) {   
@@ -21,14 +21,11 @@
 //			printf("找到了arr[%d] = %d\n", mid,tofind);
 //			printf("%d次查找\n", count);
 //			return 1;
-//		}
-//		
+//		}		
 //	}
 //	printf("没有找到\n");  // 循环结束后未找到，则输出未找到
 //	return 0;
 //}
-//
-//
 //int main() {
 //	
 //	int arr[] = { 0,2,5,7,9,10,11,15 };
@@ -38,7 +35,7 @@
 //
 //	system("pause");
 //	
-//}
+////}
 //
 //
 //int Max(int x, int y) {
@@ -61,45 +58,44 @@
 //	system("pause");
 //	return 0;
 //}
-//
-//
-//int binary_search(int arr[], int size, int tofind) //自定义函数binary_search()
-//{
-//	int left, right, mid, count = 0, count1 = 0;
-//	left = 0;
-//	right = size - 1;
-//	while (left <= right)    //査找范围不为0时执行循环体语句
-//	{
-//		count++;    //count记录査找次数
-//		mid = (left + right) / 2;    //求中间位置
-//		if (arr[mid] > tofind)   
-//			right = mid - 1;   
-//		else if (arr[mid] < tofind)    //key 大于中间值时
-//			left = mid + 1;    //确定右子表范围
-//		else if (arr[mid] = tofind)    //当key等于中间值时，证明查找成功
-//		{
-//			printf("查找成功!\n 查找 %d 次!a[%d]=%d", count, mid, tofind);    //输出査找次数及所査找元素在数组中的位置
-//			count1++;    //count1记录查找成功次数
-//			break;
-//		}
-//	}
-//	if (count1 == 0)    //判断是否查找失敗
-//		printf("查找失敗!");    //査找失敗输出no found
-//	return 0;
-//}
-//
-//int main()
-//{
-//	int arr[] = { 0,2,3,4,5,6 };
-//	int size = sizeof(arr) / sizeof(arr[0]);
-//
-//
-//	int ret = binary_search(arr, size, 0);    //调用自定义函数
-//	printf("\n");
-//	system("pause");
-//	return 0;
-//}
-//
+
+int binary_search(int arr[], int size, int tofind) //自定义函数binary_search()
+{
+	int left, right, mid, count = 0, count1 = 0;
+	left = 0;
+	right = size - 1;
+	while (left <= right)    //査找范围不为0时执行循环体语句
+	{
+		count++;    //count记录査找次数
+		mid = (left + right) / 2;    //求中间位置
+		if (arr[mid] > tofind)   
+			right = mid - 1;   
+		else if (arr[mid] < tofind)    //key 大于中间值时
+			left = mid + 1;    //确定右子表范围
+		else if (arr[mid] = tofind)    //当key等于中间值时，证明查找成功
+		{
+			printf("查找成功!\n 查找 %d 次!a[%d]=%d", count, mid, tofind);    //输出査找次数及所査找元素在数组中的位置
+			count1++;    //count1记录查找成功次数
+			break;
+		}
+	}
+	if (count1 == 0)    //判断是否查找失敗
+		printf("查找失敗!");    //査找失敗输出no found
+	return 0;
+}
+
+int main()
+{
+	int arr[] = { 0,2,3,4,5,6 };
+	int size = sizeof(arr) / sizeof(arr[0]);
+
+
+	int ret = binary_search(arr, size, 0);    //调用自定义函数
+	printf("\n");
+	system("pause");
+	return 0;
+}
+
 // 三角星星输出
 //int main() {
 //	int i, j, n;  // n为要输出的行数值得一半
@@ -489,3 +485,8 @@
 //}
 //
 //
+Microsoft Visual Studio Solution File, Format Version 12.00
+Visual Studio 15
+
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
